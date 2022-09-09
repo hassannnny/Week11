@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -26,6 +27,20 @@ public class UserInfoServiceImpl implements UserInfoService{
     public UserInfo getUserByID(int id) {
         return userDao.getReferenceById(id);
     }
+
+    @Override
+    public String getUsername(String password) {
+        return userDao.getUsername(password);
+    }
+
+    //@Override
+    //    public UserInfo authenticateUser(String username, String password){
+    //           for(UserInfo user:userDao.findAll()){
+    //               if(user.getPassword().equals(password)&&user.getUsername().equals(username))
+    //                   return user;
+    //           }
+    //           return null;
+    //    }
 
     @Override
     public UserInfo setUser(UserInfo user) {

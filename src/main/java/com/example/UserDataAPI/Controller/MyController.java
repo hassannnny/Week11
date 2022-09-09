@@ -19,6 +19,10 @@ public class MyController {
     public UserInfo getUserByID(@PathVariable int id){
         return this.userInfoService.getUserByID(id);
     }
+    @GetMapping("/{password}")
+    public String getUsername(@PathVariable String password){
+        return this.userInfoService.getUsername(password);
+    }
     @PostMapping("/userService")
     public UserInfo addUser(@RequestBody UserInfo user){
         return this.userInfoService.addUser(user);
