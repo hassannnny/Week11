@@ -1,6 +1,38 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)), url(img/background3.jpg);
+  background-repeat: no-repeat;
+  background-position: cover;
+  
+  
 }
+
+.desktop {
+  background-image: url(img/monitor3.svg);
+ width: 800px;
+ height: 600px;
+ background-repeat: no-repeat;
+ margin-left: 450px;
+ margin-top: 80px;
+
+}
+
+
+
+
+
+
+.title {
+  color: white;
+  font-size: 50px;
+  padding-top: 20px;
+}
+
+
+
 
 .App-logo {
   height: 40vmin;
