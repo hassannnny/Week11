@@ -1,16 +1,13 @@
 
-
 const Home = () => { 
     return (
 
 
-        <div id="parent">
+        <div className="parent">
 
-            <div className="title">Hassan&Devin Inc</div>
-
-           <div className="desktop"></div>
-                
- 
+            <img className="desktop" src={require("../img/monitor.png")}/>
+            <img className="keyboard"src={require("../img/keyboard3.png")} width="300" height="50"/>
+           
         </div>
 
     )

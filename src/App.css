@@ -1,37 +1,53 @@
 .App {
-  text-align: center;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-  rgba(0, 0, 0, 0.5)), url(img/background3.jpg);
+}
+
+.parent {
+  background-image: url(img/background7.jpg);
   background-repeat: no-repeat;
-  background-position: cover;
-  
+  height: 100vh;
+  background-size: 100%;
   
 }
-
+.keyboard {
+  padding-left: 850px;
+  padding-top: 10px;
+}
 .desktop {
-  background-image: url(img/monitor3.svg);
- width: 800px;
- height: 600px;
- background-repeat: no-repeat;
- margin-left: 450px;
- margin-top: 80px;
+  padding-left: 680px;
+  padding-top: 315px;
+  height: 50vh;
+}
+.waterMark {
+  padding-left: 30px;
+}
+
+ul {
+  list-style-type: none;
+  background-color: #282c34;
+  padding: 15px; 
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  opacity: 0.9;
+  position: relative;
 
 }
 
-
-
-
-
-
-.title {
+li a {
   color: white;
-  font-size: 50px;
-  padding-top: 20px;
+  font-size: large;
 }
 
+.templates {
+  padding-left: 610px;
+}
 
+.login {
+  padding-right: 30px;
+  padding-left: 610px;
+}
 
 
 .App-logo {
