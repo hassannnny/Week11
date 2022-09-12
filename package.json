@@ -1,9 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "squarepage",
-=======
   "name": "reactuser",
->>>>>>> 4c1fc7c8ab241c3e3092a597c88f7233f25a751e
   "version": "0.1.0",
   "private": true,
   "dependencies": {
