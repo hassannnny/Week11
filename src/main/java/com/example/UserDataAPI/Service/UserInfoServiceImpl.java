@@ -1,16 +1,18 @@
 package com.example.UserDataAPI.Service;
 
 import com.example.UserDataAPI.Dao.UserDao;
+import com.example.UserDataAPI.Entity.UserFinder;
 import com.example.UserDataAPI.Entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
-
 
 @Service
-public class UserInfoServiceImpl implements UserInfoService{
+public class UserInfoServiceImpl implements UserInfoService, UserDetailsService {
     @Autowired
     private UserDao userDao;
     @Override
@@ -33,15 +35,6 @@ public class UserInfoServiceImpl implements UserInfoService{
         return userDao.getUsername(password);
     }
 
-    //@Override
-    //    public UserInfo authenticateUser(String username, String password){
-    //           for(UserInfo user:userDao.findAll()){
-    //               if(user.getPassword().equals(password)&&user.getUsername().equals(username))
-    //                   return user;
-    //           }
-    //           return null;
-    //    }
-
     @Override
     public UserInfo setUser(UserInfo user) {
         return userDao.save(user);
@@ -51,5 +44,14 @@ public class UserInfoServiceImpl implements UserInfoService{
     public String deleteUserByID(int id) {
         userDao.deleteById(id);
         return "Deleted user #"+id+" successfully.";
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        UserInfo userInfo=userDao.getUserByUsername(username);
+        if(userInfo==null){
+            throw new UsernameNotFoundException("We could not find any accounts linked with that username.");
+        }
+        return new UserFinder(userInfo);
     }
 }

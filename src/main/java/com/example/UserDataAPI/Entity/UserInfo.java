@@ -8,7 +8,8 @@ public class UserInfo {
     @Id
     @Column
     @GeneratedValue(strategy=GenerationType.AUTO)
-   private int id;
+    private int id;
+
     @Column(unique=true)
     private String username;
     @Column(unique=true)
@@ -17,15 +18,18 @@ public class UserInfo {
     private String email;
     @Column
     private String name;
+    @Column
+    private double balance=0.0;
     public UserInfo(){
 
     }
-    public UserInfo(int id, String username, String password,String name,String email) {
+    public UserInfo(int id,String username, String password,String name,String email) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email=email;
         this.name=name;
+        this.balance=0.0;
     }
 
     public int getId() {
@@ -37,9 +41,8 @@ public class UserInfo {
     }
 
     public String getUsername() {
-        return username;
+       return username;
     }
-
     public void setUsername(String username) {
         this.username = username;
     }
@@ -66,5 +69,12 @@ public class UserInfo {
 
     public void setName(String name) {
         this.name = name;
+    }
+    public void setBalance(double balance){
+        this.balance=balance;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 }

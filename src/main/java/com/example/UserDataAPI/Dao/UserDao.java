@@ -7,4 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 public interface UserDao extends JpaRepository<UserInfo,Integer> {
     @Query(value = "Select username from user_info where password =:password", nativeQuery = true)
     String getUsername(String password);
+    @Query(value = "Select * from user_info where username=:username", nativeQuery = true)
+    UserInfo getUserByUsername(String username);
 }
