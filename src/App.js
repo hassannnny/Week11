@@ -4,6 +4,7 @@ import Home from "./Components/Home"
 import Login from './Components/Login';
 import NavBar from './Components/NavBar';
 import SignUp from './Components/SignUp';
+import Templates from './Components/Templates';
 
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
       break;
     case "/signup":
       Component =<SignUp />
+    break;
+    case "/templates":
+      Component =<Templates />
     break;
   } 
 

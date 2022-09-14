@@ -1,0 +1,46 @@
+.templateParent {
+    background-image: url(img/templateBG.webp);
+    background-repeat: no-repeat;
+    background-size: 1750px 1000px;
+
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+    
+}
+
+.box {
+    width: 50%;
+    float: left;
+}
+
+.one {
+    background-image: url(img/templateOne.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    height: 300px; 
+    width: 300px;
+
+    float: left;
+}
+
+.onesb {
+    font-size: 10px;
+    padding-top: 60px; 
+
+    float: left;
+
+}
+
+
+.two {
+    background-image: url(img/tiles.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    height: 300px; 
+    width: 300px;
+    float: left;
+    margin-left: 100px;
+}

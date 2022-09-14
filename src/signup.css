@@ -1,1 +1,10 @@
+.sParent {
+    background-image: url(img/desk.jpg);
+    background-repeat: no-repeat;
+    background-size: 1750px 1000px;
 
+
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+}
