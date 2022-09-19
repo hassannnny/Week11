@@ -3,6 +3,16 @@
   height: 100vh;
 }
 
+.slogan {
+  padding-top: 90px;
+  text-align: center;
+  color: white;
+  font-size: xxx-large;
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+  z-index: -2;
+}
+
 .parent {
   background-image: url(img/background7.jpg);
   background-repeat: no-repeat;
@@ -11,12 +21,12 @@
   
 }
 .keyboard {
-  padding-left: 850px;
+  padding-left: 750px;
   padding-top: 10px;
 }
 .desktop {
-  padding-left: 680px;
-  padding-top: 315px;
+  padding-left: 605px;
+  padding-top: 1px;
   height: 50vh;
 }
 .waterMark {
