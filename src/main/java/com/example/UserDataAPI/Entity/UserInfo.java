@@ -1,10 +1,27 @@
 package com.example.UserDataAPI.Entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="user_info")
 public class UserInfo {
+    public long getCart() {
+        return cart;
+    }
+
+    public void setCart(long cart) {
+        this.cart = cart;
+    }
+
+    public Roles getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Roles roles) {
+        this.roles = roles;
+    }
+
     @Id
     @Column
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -20,6 +37,11 @@ public class UserInfo {
     private String name;
     @Column
     private double balance=0.0;
+    @Column
+    private long cart;
+    @Column
+    private Roles roles;
+
     public UserInfo(){
 
     }

@@ -10,8 +10,6 @@ public class UserFinder implements UserDetails{
     private UserInfo userInfo;
     public UserFinder(UserInfo userInfo){
         super();
-        BCryptPasswordEncoder encoder=new BCryptPasswordEncoder();
-        userInfo.setPassword(encoder.encode(userInfo.getPassword()));
         this.userInfo=userInfo;
 
     }
@@ -28,6 +26,9 @@ public class UserFinder implements UserDetails{
     @Override
     public String getUsername() {
         return userInfo.getUsername();
+    }
+    public void setPassword(String password){
+        userInfo.setPassword(password);
     }
 
     @Override
